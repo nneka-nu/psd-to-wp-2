@@ -1,0 +1,12 @@
+/*404 error page*/
+.error404 {
+	& .portfolio-single {
+		&__logo {
+		margin: 45px auto 45px;
+		}
+	}
+
+	& .msg-404 {
+		height: 40vh;
+	}
+}

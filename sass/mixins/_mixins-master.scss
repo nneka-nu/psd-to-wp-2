@@ -1,0 +1,54 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 16) {
+	font-size: $sizeValue * 1px;
+	font-size: ($sizeValue/16) * 1rem;
+}
+
+// convert line-height to unitless value
+@mixin line-height($value, $fontSize: 16) {
+	line-height: $value/$fontSize;
+}
+
+// Convert letter-spacing to em
+@mixin letter-spacing($psdValue) {
+	letter-spacing: $psdValue/1000 * 1em;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+// Vertical center
+@mixin vertical-center($top: 50) {
+	position: absolute;
+	top: $top * 1%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+// Image overlay
+@mixin overlay() {
+	content: "";
+	display: block;
+	background-color: rgba(11, 104, 144, 0.65);
+	height: 100%;
+	width:100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
